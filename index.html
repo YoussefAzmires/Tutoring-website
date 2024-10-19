@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="scripts/animations.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -28,19 +29,34 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About me </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact me </a>
+        </li>
       </ul>
     </nav>
-        <!-- Counter animation-->
-        <div class="wrapper">
-          <div class="CountContainer text-center">
-            <span class="txt"> Students Tutored</span>
-            <span class="num" data-val="10">000</span>
-          </div>
-        </div>
+    <div class="hero-image">
+      <div class="hero-text">
+          <h1>I am Youssef Azmires</h1>
+          <p>And I am a web developer</p>
+          <button>Book Now</button>
+          <button> See Pricing</button>
+      </div>
+  </div>
+  <div class="wrapper">
+    <div class="CountContainer text-center">
+      <span class="txt"> Students Tutored</span>
+      <span class="num" data-val="10">00</span>
+    </div>
+  </div>
+
+    
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <h3>C#</h3>
+          <h3 id ="firstbox">
+            <spand id="language">C#</spand> 
+            <span id="comment"></span>
+          </h3>
           <p>Description for box 1.</p>
         </div>
         <div class="col-sm-4">
@@ -50,10 +66,24 @@
           </p>
         </div>
         <div class="col-sm-4">
-          <h3>Box 3</h3>
+          <h3>Javascript</h3>
           <p>Description for box 3.</p>
         </div>
       </div>
     </div>
+  
+     
+    <div class="AboutMe-Container">
+      <h1>About Me</h1>
+      <div class="col-md-6">
+        <img src="youssef.jpg" alt="youssef" />
+      </div>
+      <div class="col-md-6">
+        <p>
+          I am Youssef Azmires. I am a 21 year old web developer. I love
+    </div>
+    
+
   </body>
+  
 </html>
