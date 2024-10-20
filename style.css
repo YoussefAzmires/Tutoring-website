@@ -1,13 +1,32 @@
+/* Header Styles */
+.navbar {
+  background-color: #000000; /* Keep black for navbar */
+  margin-bottom: 0;
+}
 
+.navbar-nav {
+  margin-left: 80px;
+}
 
+.nav-item {
+  margin-top: 12px;
+  margin-right: 40px;
+}
+
+.nav-item:hover {
+  color: #FFD700; /* Gold for hover effect */
+}
+
+/* Container Styles */
 .container {
   margin: 50px auto;
-  max-width: 1200px; 
+  max-width: 1200px;
   flex-direction: column; /* Stack items vertically */
   justify-content: flex-end; /* Align items to the bottom */
   height: calc(100vh - 100px); /* Full height minus margin */
 }
 
+/* Row Styles */
 .row {
   display: flex;
   justify-content: space-between;
@@ -23,6 +42,7 @@
   }
 }
 
+/* Column Styles */
 .col-sm-4 {
   border-radius: 8px;
   padding: 20px;
@@ -30,19 +50,25 @@
   flex: 1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  
-  border: 1px solid #007BFF;
-  color: #333;
+  border: 1px solid #FFDAB9; /* Soft Peach border */
+  color: #333; /* Dark text color */
   opacity: 0; /* Start hidden */
   transform: translateY(50px); /* Start 50px below */
   animation: slideUp 0.5s forwards; /* Animation for sliding up */
-  transition: 0.3s ease-in-out;
   padding-top: 60px;
 }
 
+@keyframes slideUp {
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+/* Header Styles for Column */
 h3 {
   text-align: center;
-  background-color: #1d4cd0; /* Background color for h3 */
+  background-color: #FFE4B5; /* Light Yellow background for h3 */
   width: 100%;
   margin: 0;
   color: #FFFFFF; /* White text for h3 */
@@ -54,7 +80,6 @@ h3 {
   top: 0;
   left: 0;
 }
-
 
 .col-sm-4:nth-child(1) {
   animation-delay: 0s; /* No delay for the first box */
@@ -68,48 +93,52 @@ h3 {
   animation-delay: 0.2s; /* Delay for the third box */
 }
 
-@keyframes slideUp {
-  to {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Move to original position */
-  }
+.col-sm-4:hover h3 {
+  color: #FFD700; /* Gold for hover effect */
 }
 
-
-
-
-.col-sm-4:hover h3{
-  color:#FFD700
-}
-
+/* Paragraph Styles */
 p {
-  color: #333333; /* Grey text for paragraph */
+  color: #3e3e3e; /* Neutral gray for paragraph text */
   font-size: 1em; /* Font size for description */
 }
-.nav-item{
-  margin-top: 12px;
-  margin-right: 40px;
-}
-.nav-item :hover{
-  color: #FFD700;
-  text-decoration: none;
 
-}
-
-
-.navbar-nav{
-  margin-left: 80px;
-}
-ul{
-  list-style-type: none;
-}
-.navbar{
-  background-color: #000000;
-  margin-bottom: 0px;
-
+/* Hero Image Styles */
+.hero-image {
+  background-image: url("pictures/laptop.webp");
+  width: 100%; /* Full width of the screen */
+  height: 50vh; /* Adjust height as needed */
+  background-position: center;
+  background-repeat: no-repeat; /* No repeating */
+  background-size: cover; /* Cover the entire area */
+  position: relative;
+  margin-top: 0; /* Ensure no top margin */
+  padding: 0;
 }
 
+/* Hero Text Styles */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* White text for hero */
+}
 
+/* Button Styles in Hero */
+.hero-image button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background-color: #66CDAA; /* Teal button background */
+  transition: letter-spacing 0.2s ease-in;
+}
+
+.hero-image button:hover {
+  letter-spacing: 2px;
+}
+
+/* Count Container Styles */
 .wrapper {
   display: flex;
   justify-content: center;
@@ -119,12 +148,13 @@ ul{
 }
 
 .CountContainer {
-  background-color: #f4f7fa; /* Light background to blend in with the rest of the page */
+  background-color: #f4f7fa; /* Light background */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif; /* Match the existing font */
+  font-family: Arial, sans-serif; /* Match existing font */
   max-width: 300px;
+  border: 2px dashed #B0E0E6; /* Light Blue dashed border for consistency */
 }
 
 .txt {
@@ -138,7 +168,7 @@ ul{
 
 .num {
   font-size: 2.5rem;
-  color: #F57C00; /* Dark blue matching the boxes */
+  color: #F57C00; /* Dark Orange for number */
   font-weight: bold;
   display: inline-block;
   transition: transform 0.3s ease-in-out;
@@ -148,51 +178,43 @@ ul{
   transform: scale(1.1);
 }
 
-.CountContainer {
-  border: 2px dashed #1565c0; /* Use the same blue as the other boxes for consistency */
-}
-.hero-image {
-  background-image: url("heroimage.webp");
-  width: 100%; /* Full width of the screen */
-  height: 50vh; /* Adjust height as needed, 50vh is 50% of viewport height */
-  background-position: center;
-  background-repeat: no-repeat; /* No repeating */
-  background-size: cover; /* Cover the entire area */
-  position: relative;
-  margin-top: 0; /* Ensure no top margin */
-  padding: 0; 
+/* Perks Section Styles */
+.perks-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
-@keyframes slideUpHero {
-  from {
-    opacity: 0; /* Start transparent */
-    transform: translate(-50%, 50px); /* Start 50px below the center */
-  }
-  to {
-    opacity: 1; /* Fade in */
-    transform: translate(-50%,-100px); /* Move to original position, fully centered */
-  }
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  animation:  slideUpHero 1.5s forwards;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-.hero-image button{
-  padding: 10px 12px;
+.perk-box {
+  margin-right: 25px;
+  background-color: #fff; /* White background */
   border-radius: 10px;
-  background-color: #9e8b1c;
-  transition: letter-spacing 0.2s ease-in;  
-  
-}
-.hero-image button:hover{
-  letter-spacing: 2px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+.perk-box:hover {
+  transform: translateY(-10px);
+}
 
+.perk-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+#availability{
+  width: 70px;
+}
 
+.perk-box h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FFDAB9; /* Soft Peach for perk titles */
+}
+
+.perk-box p {
+  font-size: 0.9em;
+  color: #666; /* Gray text */
+}
