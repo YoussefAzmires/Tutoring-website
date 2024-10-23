@@ -1,4 +1,17 @@
+const counter = document.querySelectorAll(".num")
+
 document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries =>{
+        entries.forEach(entry =>{
+            if(entry.isIntersecting)
+            {
+                startCounter(entry.target)
+            }
+        }
+    })
+
+
+
     const counter = document.querySelector(".num");
     const targetVal = parseInt(counter.getAttribute("data-val"));
     let currentVal = 0;
@@ -20,3 +33,5 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCounter();
    
 });
+
+
